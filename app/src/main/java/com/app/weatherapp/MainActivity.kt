@@ -115,7 +115,7 @@ fun WeatherScreen() {
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceEvenly
                     ) {
-                        WeatherCard(city, it.name, icon = Icons.Default.Place)
+                        WeatherCard("City", it.name, icon = Icons.Default.Place)
                         WeatherCard("Temperature", "${it.main.temp} °C", icon = Icons.Default.Star)
                     }
                     Spacer(modifier = Modifier.height(10.dp))
@@ -145,7 +145,7 @@ fun WeatherCard(label: String, value: String, icon: ImageVector) {
     Card(
         modifier = Modifier
             .size(150.dp)
-            .padding(8.dp),
+            .padding(4.dp),
         elevation = CardDefaults.cardElevation(4.dp)
 
     ) {
